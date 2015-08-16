@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView3456y"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/about_shelter"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="24sp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/textViewssss"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/info_about_shelter"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_below="@+id/textView1"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/textViewwdfwes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mode"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="24sp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/textViewadaaaa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mode_shelter"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_below="@+id/textView1"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/principe"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="24sp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/principe_item"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_below="@+id/textView1"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

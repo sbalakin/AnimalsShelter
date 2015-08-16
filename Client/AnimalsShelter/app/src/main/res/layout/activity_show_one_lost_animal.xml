@@ -1,0 +1,160 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/backgroundrepeat"
+    android:weightSum="5">
+
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="2">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/imageViewSolo"
+            android:layout_gravity="center" />
+
+        <ProgressBar
+            android:id="@+id/progressBar2"
+            style="?android:attr/progressBarStyleLargeInverse"
+
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:background="@drawable/border_style5"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_weight="3"
+        android:layout_height="fill_parent">
+
+        <TableLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:stretchColumns="1,2,3">
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Large Text"
+                    android:id="@+id/textViewSpecies" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Порода:"
+                    android:id="@+id/textView15"
+                    android:typeface="monospace"
+                    android:textColor="#ff000000" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Medium Text"
+                    android:id="@+id/textViewBreed" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Дата:"
+                    android:id="@+id/textView19"
+                    android:typeface="monospace"
+                    android:textColor="#ff000000" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Medium Text"
+                    android:id="@+id/textViewDate" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Последнее\nМестоположение:"
+                    android:id="@+id/textView23"
+                    android:typeface="monospace"
+                    android:textColor="#ff000000" />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:lines="3"
+                    android:text="Medium Text"
+                    android:id="@+id/textViewLocation" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Другая Информация:"
+                    android:id="@+id/textView25"
+                    android:typeface="monospace"
+                    android:textColor="#ff000000" />
+
+
+            </TableRow>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:id="@+id/textViewDescription" />
+
+
+        </TableLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:text="ПК:"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewPK" />
+
+
+</LinearLayout>

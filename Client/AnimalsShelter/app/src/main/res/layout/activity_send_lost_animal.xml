@@ -1,0 +1,262 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:touchscreenBlocksFocus="false"
+    android:background="@drawable/backgroundrepeat">
+
+
+    <ImageView
+        android:id="@+id/Imageprev2"
+        android:layout_marginLeft="5dp"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:src="@drawable/placeholder"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerCrop"
+        android:layout_alignLeft="@+id/layoutforImgBtnUpload2"
+        android:layout_alignStart="@+id/layoutforImgBtnUpload2" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutBtnCapture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/linearLayoutBtnBrowse"
+        android:layout_marginTop="33dp"
+        android:layout_alignRight="@+id/linearLayoutBtnBrowse"
+        android:layout_alignEnd="@+id/linearLayoutBtnBrowse"
+        android:layout_alignLeft="@+id/linearLayoutBtnBrowse"
+        android:layout_alignStart="@+id/linearLayoutBtnBrowse">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnCapture2"
+            android:src="@drawable/capture"
+            android:layout_gravity="center"
+            android:background="@null" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Фотографировать"
+            android:layout_gravity="center"
+            android:id="@+id/textView13"
+            android:textColor="#ff000000"
+            android:textSize="10dp"
+            android:typeface="monospace" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutBtnBrowse"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginStart="18dp"
+        android:layout_alignTop="@+id/Imageprev2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/btnBrowse2"
+            android:background="@null"
+            android:src="@drawable/browse" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Выбрать Фото"
+            android:layout_gravity="center"
+            android:id="@+id/textView14"
+            android:textSize="10dp"
+            android:textColor="#ff000000"
+            android:typeface="monospace" />
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Imageprev2"
+        android:layout_above="@id/layoutforImgBtnUpload2"
+        android:id="@+id/scrollView">
+
+        <TableLayout
+            android:id="@+id/tableLayoutPhone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_style3"
+            android:layout_below="@id/Imageprev2"
+            android:stretchColumns="*">
+
+            <TableRow
+                android:layout_marginLeft="5dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Номер Телефон:"
+                    android:id="@+id/textView2"
+                    android:textColor="#ff000000" />
+
+                <EditText
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:maxLength="11"
+                    android:id="@+id/editTextPhone2" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_marginLeft="5dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Дата:"
+                    android:textColor="#ff000000"
+                    android:id="@+id/textView7" />
+
+                <EditText
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="date"
+                    android:focusable="false"
+                    android:id="@+id/editTextDate" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="8dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="50dp"
+                    android:text="Последнее Местоположение:"
+                    android:textColor="#ff000000"
+                    android:id="@+id/textView8" />
+
+                <LinearLayout
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:id="@+id/imageButtonOpenMap"
+                        android:src="@drawable/map" />
+
+                    <EditText
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="textMultiLine"
+                        android:lines="3"
+                        android:id="@+id/editTextAddress" />
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="5dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Вид:"
+                    android:textColor="#ff000000"
+                    android:id="@+id/textView6" />
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spinnerSpecies2"
+                    android:drawSelectorOnTop="true"
+                    android:entries="@array/array_item_for_spinner_species"
+                    android:focusable="true" />
+            </TableRow>
+
+            <TableRow
+                android:layout_marginLeft="5dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:gravity="top"
+                    android:layout_weight="0"
+                    android:layout_gravity="top"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Другая\nИнформация:"
+                    android:textColor="#ff000000"
+                    android:id="@+id/textView12" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:lines="3"
+                    android:id="@+id/editTextDescription2" />
+
+
+            </TableRow>
+
+
+        </TableLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/layoutforImgBtnUpload2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:id="@+id/btnUpload2"
+            android:src="@drawable/upload"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Послать"
+            android:id="@+id/textView10"
+            android:layout_gravity="center"
+            android:textColor="#ff000000" />
+
+    </LinearLayout>
+
+</RelativeLayout>

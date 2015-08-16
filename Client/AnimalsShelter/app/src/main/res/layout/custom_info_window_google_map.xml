@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/backgroundrepeat">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:id="@+id/imageViewSolo2"
+                android:layout_gravity="center" />
+
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:background="@drawable/border_style5"
+            android:orientation="vertical"
+            android:layout_width="150dp"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Medium Text"
+                    android:id="@+id/textViewDate2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:lines="3"
+                    android:text="Medium Text"
+                    android:id="@+id/textViewLocation2" />
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TableLayout
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="10dp"
+        android:stretchColumns="*"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Тип Карты:" />
+
+            <Spinner
+                android:id="@+id/spinner_map_type2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </TableRow>
+
+
+    </TableLayout>
+
+
+    <fragment
+        android:layout_marginTop="3dp"
+        android:id="@+id/map_lost_animals"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        class="com.google.android.gms.maps.MapFragment" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView" />
+
+</LinearLayout>

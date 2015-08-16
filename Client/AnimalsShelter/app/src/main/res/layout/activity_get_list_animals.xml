@@ -1,0 +1,140 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundrepeat"
+    tools:context=".GetListAnimals"
+    android:id="@+id/container_list_animals"
+    android:orientation="vertical">
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*">
+
+        <LinearLayout
+            android:weightSum="3"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <EditText
+                android:maxLength="50"
+                android:layout_marginLeft="30dp"
+                android:layout_weight="1"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:hint="кличка животного"
+                android:id="@+id/editTextSearch"
+                android:textColorHint="#15111111" />
+
+            <ImageButton
+                android:layout_margin="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:src="@drawable/search"
+                android:id="@+id/imageButton" />
+        </LinearLayout>
+
+        <TableRow
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border_style5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Животное"
+                    android:layout_gravity="center"
+                    android:id="@+id/textView20"
+                    android:typeface="monospace"
+                    android:textColor="#d5090909" />
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/array_item_for_filter_species"
+                    android:id="@+id/spinnerFilterSpecies" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Пол"
+                    android:layout_gravity="center"
+                    android:id="@+id/textView21"
+                    android:textColor="#d5090909" />
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/array_item_for_filter_gender"
+                    android:id="@+id/spinnerFilterGender" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Возраст"
+                    android:id="@+id/textView22"
+                    android:textColor="#d5090909" />
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/array_item_for_filter_age"
+                    android:id="@+id/spinnerFilterAge" />
+            </LinearLayout>
+
+        </TableRow>
+
+
+    </TableLayout>
+
+    <GridView
+        android:id="@+id/gridView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingRight="3dp"
+        android:paddingLeft="3dp"
+        android:columnWidth="150dp"
+
+        android:background="@drawable/backgroundrepeat"
+        android:gravity="center"
+        android:numColumns="auto_fit"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="8dp"
+        android:horizontalSpacing="-5dp"
+        android:focusable="true"
+        android:clickable="true" />
+
+    <!--<fragment
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="com.app.animalsshelter.content.get_list_animals.ShowOneAnimalFragment"
+        android:id="@+id/fragment"
+        android:layout_gravity="center" />-->
+
+
+</LinearLayout>

@@ -1,0 +1,130 @@
+<resources>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_example">Example action</string>
+    <string name="app_name">Animals Shelter</string>
+    <string name="drawer_open">Open Navigation Drawer</string>
+    <string name="drawer_close">Close Navigation Drawer</string>
+    <string name="action_settings">Settings</string>
+
+
+    <string name="album_name">New Album</string>
+    <string-array name="drawer_items">
+        <item>NEWS</item>
+        <item>Список Животных Приюта</item>
+        <item>Отдать Животное В Приют</item>
+        <item>Список Потерянных Животных</item>
+        <item>Сообщить О Потерянном Животном</item>
+        <item>Помощь</item>
+        <item>О Приюте</item>
+    </string-array>
+    <string name="title_activity_get_list_animals">GetListAnimals</string>
+
+    <string-array name="array_item_for_spinner_species">
+        <item>Собака</item>
+        <item>Кот</item>
+        <item>Прочие</item>
+    </string-array>
+
+    <string-array name="array_item_for_spinner_age">
+        <item>&lt; 1 года</item>
+        <item>1-3 лет</item>
+        <item>3-5 лет</item>
+        <item>&gt;5 лет</item>
+    </string-array>
+
+    <string-array name="array_item_for_filter_species">
+        <item>--Все--</item>
+        <item>Собака</item>
+        <item>Кот</item>
+        <item>Прочие</item>
+    </string-array>
+
+    <string-array name="array_item_for_filter_age">
+        <item>--Все--</item>
+        <item>&lt; 1 Года</item>
+        <item>1 - 3 Лет</item>
+        <item>3 - 5 Лет</item>
+        <item>&gt; 5 Лет</item>
+    </string-array>
+
+    <string-array name="array_item_for_filter_gender">
+        <item>--Все--</item>
+        <item>Мальчик</item>
+        <item>Девочка</item>
+    </string-array>
+    <string name="title_activity_show_one_animal">ShowOneAnimal</string>
+
+    <string name="title_activity_help_us">HelpUs</string>
+    <string name="title_activity_about_us">AboutUs</string>
+
+    <string name="about_shelter">О приюте</string>
+    <string name="info_about_shelter">  Приют основной своей целью ставит содержание приюта для бездомных собак и кошек. В приюте попавшее в беду животное получает ветеринарную помощь, заботливый уход, ждет себе добрых любящих хозяев.</string>
+    <string name="mode">Режим работы приюта</string>
+    <string name="mode_shelter">Понедельник, вторник - санитарные дни (приют для посещений ЗАКРЫТ)
+                                Среда, четверг, пятница - с 11 до 18 часов.
+                                Суббота, воскресенье - с 10 до 19 часов.</string>
+    <string name="principe">Принципы:</string>
+    <string name="principe_item">1. Приют принимает щенков и котят.
+
+                                 2. В Приют разработаны жесткие правила, по которым осуществляется передача животных новым владельцам.
+
+                                 3. В Приют не стерилизуют животных без медицинских показаний.
+
+                                 За все принципы, сформированные за 15 лет работы, Приют получает массу критики со стороны других обществ по защите животных. Но здесь все просто: Приют не занимается передержкой, поэтому и принимает малышей, выращивает их, вылечивает. Приняв к себе животное, «Гвардия» несет за него реальную ответственность, не отдавая его кому попало.
+
+                                 В Приюте принципиально стерилизуются не все девочки — нам постоянно нужны кормящие матери, ведь малышей привозят постоянно! Есть также и другие причины, в том числе финансово-бытовые, по которым на данный момент, поголовная стерилизация не проводится.
+
+                                Приют  просто не может себе позволить отдать животное человеку, впервые приехавшему в Приют и впервые увидевшего питомца вживую, а не на фото. Приют должен быть уверен, что человек в состоянии содержать животное, в том числе финансово. Если человек не может или не выдерживает поездок в Приют, то как же он собирается держать собаку или кошку у себя дома годами?</string>
+    <string name="help">  Приют приглашает всех любителей животных и желающих вступить в организацию, и будет благодарны всем, кто окажет поддержку, особенно сотрудничеству с ветлечебницами, школами и детскими домами. Содержание приюта - большое доброе и важное дело, которое трудно сделать в одиночку. Организация обращаемся ко всем жителями, кому небезразлично, каким наш город будет: только красивым и уютным или еще и гуманным, интеллигентным. Отношение к слабым, "братьям нашим меньшим" - показатель нашей общей культуры. Помогая животным, мы воспитываем в себе и детях доброту и сострадание.</string>
+    <string name="costs">Приют
+                        Свет
+                        Газ
+                        Вода
+                        Отопление (уголь, дрова. зимой)
+                        Обработка территории от паразитов (лето)
+                        Ветеринарные препараты
+                        Инвентарь для приюта: кошачьи клетки, переноски, лотки, цепи, будки и т.п.
+                        Еда для животных
+                        Оплата ремонтных и хоз. работ
+                        Оплата автотранспорта
+                        Вывоз мусора
+                        Оплата работников приюта
+                        Услуги ветеринаров: стерилизация, лечение, вызовы
+                        Содержание инвалидов в "хосписе"
+                        Помощь передержкам и "опекунам"
+                        Орг. расходы (рекламн.материал, акции, коробочки и пр.)</string>
+    <string name="title_activity_send_animal">SendAnimal</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_send_lost_animal">SendLostAnimal</string>
+    <string name="title_activity_google_map">GoogleMap</string>
+    <string-array name="maps_type">
+        <item>НОРМАЛЬНЫЙ</item>
+        <item>ГИБРИД</item>
+    </string-array>
+    <string name="title_activity_get_list_lost_animals">GetListLostAnimals</string>
+    <string name="title_activity_show_one_lost_animal">ShowOneLostAnimal</string>
+    <string name="title_activity_google_map_lost_animals">GoogleMapLostAnimals</string>
+
+
+    <string name="get_list_animals_filter_all">--Все--</string>
+    <string name="get_list_animals_clicked_marker">CLicked marker</string>
+    <string name="get_list_animals_loading_map">Loading map ...</string>
+    <string name="get_list_animals_please_wait">Please wait...</string>
+    <string name="get_list_animals_cat">Кот</string>
+    <string name="get_list_animals_dog">Собака</string>
+    <string name="get_list_animals_null">null</string>
+    <string name="get_list_animals_lost_animal">Lost animal!</string>
+
+    <string name="send_animal_enter_phone_number">Пожалуйста ввести номер телефона!</string>
+
+    <string name="log_values">VALUES</string>
+    <string name="log_listanimal">listanimal</string>
+
+</resources>
