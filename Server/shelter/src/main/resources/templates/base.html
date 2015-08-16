@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <head>
+        <title>Animals</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="/css/bootstrap.css" />
+        <script src="/jquery/jquery.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+
+    </head>
+
+    <body> 
+        <div class="navbar navbar-default  navbar-form">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">
+                        <span class="glyphicon glyphicon glyphicon-home"></span>
+                    </a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+
+                        <li><a   th:href="'/shelters'">Приюты </a></li>
+
+
+                        <li><a   href="sponsor.html">Спонсоры </a></li>
+                        <li><a   href="coworker.html">Сотрудники </a></li>
+                        <li><a   href="volunteer.html">Волонтёры </a></li>
+                        <li><a   href="helper.html">Передержки </a></li>
+                        <li><a   th:href="'/temporary_owners'">Хозяин </a></li>
+                        <li><a   href="financial.html">Финансы</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div class="container">
+
+            <th:block layout:fragment="rows" />
+        </div>
+
+    </body>
+</html>

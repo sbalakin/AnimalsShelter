@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="base">
+
+
+    <th:block layout:fragment="rows">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 th:text="${type_animal.title}"></h1>
+
+            </div>
+
+
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <img class="img-responsive" src="img/dog.jpg" alt=""/>
+            </div>
+            <div class="col-md-5">
+
+                <form style="float: left;   " method="GET" th:action="'/animals/' + ${animal.pk_animal}+'/edit'" >
+
+                    <button type="submit"  class="btn btn-primary" >Редактирование</button>
+                </form>
+
+                <form  style="float: right;" method="POST" th:action="'/animals/' + ${animal.pk_animal}">
+
+
+                    <input type="hidden" name="_method" value="DELETE"/>
+                    <button type="submit" class="btn btn-danger" >Удаление</button>
+
+                    <button type="button" class="btn btn-default" onclick="javascript:history.back()" >Назад</button>
+                </form>
+                <br/> <br/>
+
+                <h3>Описание</h3>
+                <p> <h5 th:text="${animal.description}"></h5></p>
+                <h3>Подробности</h3>
+                <ul> 
+                    <li><strong >Вид: </strong><span th:text="${type_animal.title}"></span> </li>
+                    <li><strong>Имя: </strong> <span th:text="${animal.name}"></span>  </li>
+                    <li><strong>Пол: </strong> <span th:text="${animal.showGender}"></span> </li>
+                    <li><strong>Тип (бесхозная, потерялась,...):</strong>  <span th:text="${animal.type}"></span></li>
+
+                    <li><strong>Цвет: </strong>  <span th:text="${animal.color}"></span>   </li>
+                    <li><strong>Медицинский статус: </strong>  <span th:text="${animal.health_status}"></span>  </li>
+                    <li><strong>Размер(вес): </strong><span th:text="${animal.weight}"></span> кг </li>
+                    <li><strong>Порода : </strong> <span th:text="${animal.breed}"></span>  </li> 
+                    <li><strong>Отношение с людьми (с другими животными): </strong> <span th:text="${animal.relationship_with_human}"></span> </li>
+                    <li><strong>Возраст: </strong><span th:text="${animal.age}"></span>  </li>
+                </ul>
+            </div>
+        </div>
+    </th:block>
+
+</html>

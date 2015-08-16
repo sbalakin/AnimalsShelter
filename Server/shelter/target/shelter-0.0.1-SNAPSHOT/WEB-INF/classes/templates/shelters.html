@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="base">
+
+    <body>
+        <th:block layout:fragment="rows">
+            <form method="POST" th:action="'/shelters/add'" >
+
+                <table class="table">
+
+                    <div class="caption">
+                        <input  name="name" placeholder="Название"  />
+                    </div>					
+
+                    <div class="caption">
+                        <input  name="telephone" placeholder="Номер телефона"  />
+                    </div>	
+                    <div class="caption">
+                        <input  name="address" placeholder="Адрес"  />
+
+                    </div>	
+                    <div class="caption">
+                        <input  name="seat" placeholder="Количество мест"  />
+                    </div>	
+                    <div class="caption">
+                        <input  name="free_seat" placeholder="Свободных мест"  />
+                    </div>	
+                    <div class="caption">
+                        <input  name="site" placeholder="Сайт"  />
+                    </div>	
+                    <div class="caption">
+                        <input  name="email" placeholder="Почта"  />
+                    </div>	
+
+                    <span class="btn btn-default btn-file">
+                        Вставить картинку <input type="file" name="image"/>
+                    </span>
+                    <div class="span6">
+                        <textarea class="field span12" id="textarea" rows="6" name="description" placeholder="Описание"></textarea>
+                    </div>
+                </table>
+                <button type="submit" class="btn btn-primary">Добавить</button> 
+                <button type="reset" class="btn btn-default">Очистить поля</button> 
+            </form>
+
+            <br/><br/>
+
+            <br/> 
+
+
+            <br/><br/><br/>
+
+            <tbody>
+                <tr th:each="shelter : ${shelters}">
+                    <tr class="row">
+                        <div class="col-sm-6 col-md-4">
+                            <a class="thumbnail" th:href="@{'/shelters/' + ${shelter.pk_shelter}}">
+                                <img th:src="@{'/img/' + ${shelter.pk_shelter}} +'.jpg'"  />
+                                <div class="caption">
+
+                                    <center><h4>Название: <strong><span th:text="${shelter.name}"></span></strong></h4></center>
+                                    <center><h6>Номер телефона: <span th:text="${shelter.telephone}"></span></h6></center>
+                                    <center><h6>Адрес: <span th:text="${shelter.address}"></span></h6></center>
+                                    <center><h6>Количество мест: <span th:text="${shelter.seat}"></span></h6></center>
+                                    <center><h6>Свободных мест: <span th:text="${shelter.free_seat}"></span></h6></center>
+                                    <center><h6>Сайт: <span th:text="${shelter.site}"></span></h6></center>
+                                    <center><h6>Почта: <span th:text="${shelter.email}"></span></h6></center>
+                                    <center><h6>description: <span th:text="${shelter.description}"></span></h6></center>
+
+                                    <center><h6>img: <span th:text="${shelter.image}"></span></h6></center>
+                                </div>
+                            </a>
+                        </div>
+
+                    </tr>
+                </tr>
+            </tbody>
+        </th:block>
+    </body>
+</html>
