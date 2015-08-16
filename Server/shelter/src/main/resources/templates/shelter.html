@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="base">
+
+
+    <th:block layout:fragment="rows">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 th:text="${shelter.name}"></h1>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <img class="img-responsive" src="img/dog.jpg" alt=""/>
+            </div>
+            <div class="col-md-5">
+
+                <form style="float: left;   " method="GET" th:action="'/shelters/' + ${shelter.pk_shelter}+'/edit'" >
+
+                    <button type="submit"  class="btn btn-primary" >Редактирование</button>
+                </form>
+
+                <form  style="float: right;" method="POST" th:action="'/shelters/' + ${shelter.pk_shelter}">
+
+
+                    <input type="hidden" name="_method" value="DELETE"/>
+                    <button type="submit" class="btn btn-danger" >Удаление</button>
+
+                    <button type="button" class="btn btn-default" onclick="javascript:history.back()" >Назад</button>
+                </form>
+                <br/> <br/>
+                <h3>Описание</h3>
+                <p> <h5 th:text="${shelter.description}"></h5></p> 
+                <h3>Подробности</h3>
+                <ul> 
+                    <li><strong>Название: </strong> <span th:text="${shelter.name}"></span>  </li>
+                    <li><strong>Номер телефона: </strong> <span th:text="${shelter.telephone}"></span> </li>
+                    <li><strong>Адрес:</strong>  <span th:text="${shelter.address}"></span></li>
+                    <li><strong>Количество мест: </strong>  <span th:text="${shelter.seat}"></span>   </li>
+                    <li><strong>Свободных мест: </strong>  <span th:text="${shelter.free_seat}"></span>   </li>
+                    <li><strong>Сайт: </strong>  <span th:text="${shelter.site}"></span>   </li>
+                    <li><strong>Почта: </strong>  <span th:text="${shelter.email}"></span>   </li>
+
+                </ul>
+            </div>
+        </div>
+    </th:block>
+</html>

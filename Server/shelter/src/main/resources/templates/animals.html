@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="base">
+
+    <body>
+        <th:block layout:fragment="rows">
+            <form method="POST" th:action="'/animals/add'" >
+
+                <table class="table">
+                    <form class="form-horizontal"  >
+                        <h5>Вид:
+                            <select  name="type_animal">
+                                <c:forEach th:each="item: ${type_animal}">
+                                    <option   th:text="${item.title}"></option>
+                                </c:forEach>
+                            </select> 
+                        </h5>
+                    </form>
+                    <div class="caption">
+                        <input  name="name" placeholder="Имя"  />
+                    </div>					
+                    <div class="caption" > 
+
+
+                        <h5>Пол:
+                            <select name="gender" >
+                                <option value="1">Мальчик</option>
+                                <option value="2">Девочка</option>
+                            </select> 
+                        </h5>
+
+                    </div>	
+                    <div class="caption">
+                        <input  name="type" placeholder="Тип (бесхозная,...)"  />
+                    </div>	
+                    <div class="caption">
+                        <input  name="color" placeholder="Цвет"  />
+
+                    </div>	
+                    <div class="caption">
+                        <input  name="health_status" placeholder="Медицинский статус"  />
+                    </div>	
+                    <div class="caption">
+                        <input  name="weight" placeholder="Размер(вес)"  />
+                    </div>	
+                    <div class="caption">
+                        <input  name="breed" placeholder="Порода"  />
+                    </div>	
+                    <div class="caption">
+                        <input  name="relationship_with_human" placeholder="Отношение с людьми"  />
+                    </div>	
+                    <div class="caption">
+                        <input  name="age" placeholder="Возраст"  />
+                    </div>	
+                    <span class="btn btn-default btn-file">
+                        Вставить картинку <input type="file" name="image"/>
+                    </span>
+                    <div class="span6">
+                        <textarea class="field span12" id="textarea" rows="6" name="description" placeholder="Описание"></textarea>
+                    </div>
+                </table>
+                <button type="submit" class="btn btn-primary">Добавить</button> 
+                <button type="reset" class="btn btn-default">Очистить поля</button> 
+            </form>
+
+            <br/><br/>
+
+            <div class="caption">
+
+                <strong> Фильтры:</strong> 
+            </div>
+            <br/> 
+
+            <div class="caption">
+                <span class="col-sm-3" >
+                    <select class="form-control">
+                        <option value="one">Все</option>
+                        <option value="two">Кошки</option>
+                        <option value="three">Собаки</option>
+                        <option value="four">Прочие</option>
+
+                    </select>
+                </span>
+                <span class="col-sm-3" >
+                    <select class="form-control">
+                        <option value="one">Все</option>
+                        <option value="two">Мальчик</option>
+                        <option value="three">Девочка</option>
+
+
+                    </select>
+                </span>
+                <span class="col-sm-3" >
+                    <select class="form-control">
+                        <option value="one">Все</option>
+                        <option value="two">Стериализован</option>
+                        <option value="three">Нестериализован</option>
+
+
+                    </select>
+                </span>				
+            </div>
+            <br/><br/><br/>
+
+            <tbody>
+                <tr th:each="animal: ${animals}">
+                    <tr class="row">
+                        <div class="col-sm-6 col-md-4">
+                            <a class="thumbnail" th:href="@{'/animals/' + ${animal.pk_animal}}">
+                                <img th:src="@{'/img/' + ${animal.pk_animal}} +'.jpg'"  />
+                                <div class="caption">
+                                    <center><h3>Вид: <span th:text="${animal.type_animal.title}"></span></h3></center>
+                                    <center><h4>Имя: <strong><span th:text="${animal.name}"></span></strong></h4></center>
+                                    <center><h6>Тип: <span th:text="${animal.type}"></span></h6></center>
+                                    <center><h6>Пол: <span th:text="${animal.showGender}"></span></h6></center>
+                                    <center><h6>Цвет: <span th:text="${animal.color}"></span></h6></center>
+                                    <center><h6>Медицинский: <span th:text="${animal.health_status}"></span></h6></center>
+                                    <center><h6>вес: <span th:text="${animal.weight}"></span></h6></center>
+                                    <center><h6>Порода: <span th:text="${animal.breed}"></span></h6></center>
+                                    <center><h6>Отношение с людьми: <span th:text="${animal.relationship_with_human}"></span></h6></center>
+                                    <center><h6>Возраст: <span th:text="${animal.age}"></span></h6></center>
+                                    <center><h6>description: <span th:text="${animal.description}"></span></h6></center>
+
+                                    <center><h6>img: <span th:text="${animal.image}"></span></h6></center>
+                                </div>
+                            </a>
+                        </div>
+
+                    </tr>
+                </tr>
+            </tbody>
+        </th:block>
+    </body>
+</html>

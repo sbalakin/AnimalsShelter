@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="base">
+
+    <th:block layout:fragment="rows">
+        <div class="container">
+            <form method="POST" th:action="'/shelters/' + ${shelter.pk_shelter}">
+                <input type="hidden" name="_method" value="PUT" />
+                <table class="table">
+
+                    <div class="caption">
+                        <span class="col-sm-2" >Название:</span>
+                        <input  name="name" th:value="${shelter.name}"    />
+                    </div>					
+
+                    <div class="caption">
+                        <span class="col-sm-2" >Номер телефона:</span>
+                        <input  name="telephone" th:value="${shelter.telephone}" />
+                    </div>	
+                    <div class="caption">
+                        <span class="col-sm-2" >Адрес: </span>
+                        <input  name="address" th:value="${shelter.address}"  />
+                    </div>	
+                    <div class="caption">
+                        <span class="col-sm-2" >Количество мест:</span>
+                        <input  name="seat" th:value="${shelter.seat}"  />
+                    </div>
+                    <div class="caption">
+                        <span class="col-sm-2" >Свободных мест:</span>
+                        <input  name="free_seat" th:value="${shelter.free_seat}"  />
+                    </div>
+                    <div class="caption">
+                        <span class="col-sm-2" >Сайт:</span>
+                        <input  name="site" th:value="${shelter.site}"  />
+                    </div>
+                    <div class="caption">
+                        <span class="col-sm-2" >Почта:</span>
+                        <input  name="email" th:value="${shelter.email}"  />
+                    </div>
+                    <div class="span6">
+                        <span class="col-sm-2" >Описание:</span>
+                        <textarea   class="field span12"  rows="6"  th:field="${shelter.description}" ></textarea>
+                    </div>
+
+                    <span class="col-sm-1" > </span>
+                    <div class="btn btn-default btn-file">
+                        Browse <input type="file" name="image" />
+                    </div>
+
+
+                </table>
+
+
+                <button type="submit" class="btn btn-primary">Сохранить</button>
+                <button type="button" class="btn btn-default" onclick="javascript:history.back()">Назад</button>
+                <br/><br/><br/>
+
+            </form>
+
+
+
+        </div>
+    </th:block>
+
+</html>
+
